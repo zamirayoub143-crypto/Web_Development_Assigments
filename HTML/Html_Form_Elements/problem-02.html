@@ -1,0 +1,220 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinic Appointment Booking</title>
+</head>
+
+<body>
+
+    <h1>City Care Clinic - Appointment Booking</h1>
+
+    <p>
+        Please complete this form to request an appointment with one of our
+        doctors. Provide accurate information so that we can contact you.
+    </p>
+
+    <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=800&q=80"
+         alt="Modern Clinic"
+         width="500">
+
+    <hr>
+
+    <form action="#" method="post">
+
+        <fieldset>
+            <legend><strong>Patient Information</strong></legend>
+
+            <p>
+                <label for="patient_name">Patient Name:</label><br>
+                <input type="text"
+                       id="patient_name"
+                       name="patient_name"
+                       minlength="3"
+                       maxlength="60"
+                       placeholder="Enter patient name"
+                       required>
+            </p>
+
+            <p>
+                <label for="patient_email">Email:</label><br>
+                <input type="email"
+                       id="patient_email"
+                       name="patient_email"
+                       autocomplete="email"
+                       required>
+            </p>
+
+            <p>
+                <label for="patient_mobile">Mobile Number:</label><br>
+                <input type="tel"
+                       id="patient_mobile"
+                       name="patient_mobile"
+                       pattern="[6-9][0-9]{9}"
+                       maxlength="10"
+                       placeholder="10-digit mobile number"
+                       required>
+            </p>
+
+            <p>
+                <label for="patient_dob">Date of Birth:</label><br>
+                <input type="date"
+                       id="patient_dob"
+                       name="patient_dob"
+                       required>
+            </p>
+
+            <p>
+                <label for="patient_id">Patient ID (Optional):</label><br>
+                <input type="text"
+                       id="patient_id"
+                       name="patient_id"
+                       placeholder="If already registered"
+                       maxlength="20">
+            </p>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend><strong>Appointment Details</strong></legend>
+
+            <p>
+                <label for="appointment_date">Appointment Date:</label><br>
+                <input type="date"
+                       id="appointment_date"
+                       name="appointment_date"
+                       min="2026-09-05"
+                       required>
+            </p>
+
+            <p>
+                <label for="appointment_time">Preferred Time:</label><br>
+                <input type="time"
+                       id="appointment_time"
+                       name="appointment_time"
+                       min="09:00"
+                       max="18:00"
+                       required>
+            </p>
+
+            <p>
+                <label for="doctor">Select Doctor:</label><br>
+                <select id="doctor" name="doctor" required>
+                    <option value="">-- Select Doctor --</option>
+                    <option value="dr_rahul">Dr. Rahul Sharma - Cardiologist</option>
+                    <option value="dr_neha">Dr. Neha Verma - Dermatologist</option>
+                    <option value="dr_arjun">Dr. Arjun Mehta - Orthopedic</option>
+                    <option value="dr_priya">Dr. Priya Singh - Pediatrician</option>
+                    <option value="dr_aman">Dr. Aman Kapoor - General Physician</option>
+                    <option value="dr_sana">Dr. Sana Khan - Dentist</option>
+                </select>
+            </p>
+
+            <p>
+                <strong>Visit Type:</strong><br>
+
+                <input type="radio" id="new" name="visit_type" value="new_patient" required>
+                <label for="new">New Patient</label><br>
+
+                <input type="radio" id="followup" name="visit_type" value="follow_up">
+                <label for="followup">Follow-up</label><br>
+
+                <input type="radio" id="consultation" name="visit_type" value="consultation">
+                <label for="consultation">Consultation</label><br>
+
+                <input type="radio" id="emergency" name="visit_type" value="emergency">
+                <label for="emergency">Emergency</label>
+            </p>
+
+            <p>
+                <strong>Preferred Communication Method:</strong><br>
+
+                <input type="radio" id="phone" name="communication" value="phone" required>
+                <label for="phone">Phone</label>
+
+                <input type="radio" id="email_contact" name="communication" value="email">
+                <label for="email_contact">Email</label>
+
+                <input type="radio" id="sms" name="communication" value="sms">
+                <label for="sms">SMS</label>
+            </p>
+
+            <p>
+                <label for="reason">Reason for Visit / Additional Information:</label><br>
+                <textarea id="reason"
+                          name="reason_for_visit"
+                          rows="5"
+                          cols="50"
+                          minlength="5"
+                          maxlength="500"
+                          placeholder="Briefly describe your reason for visiting"
+                          required></textarea>
+            </p>
+
+            <p>
+                <input type="checkbox"
+                       id="terms"
+                       name="appointment_terms"
+                       value="accepted"
+                       required>
+
+                <label for="terms">
+                    I accept the clinic appointment terms and confirm that
+                    the information provided is accurate.
+                </label>
+            </p>
+
+        </fieldset>
+
+        <br>
+
+        <input type="submit" value="Book Appointment">
+        <input type="reset" value="Reset">
+
+    </form>
+
+    <hr>
+
+    <h2>Clinic Timings</h2>
+
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Day</th>
+            <th>Morning</th>
+            <th>Evening</th>
+        </tr>
+
+        <tr>
+            <td>Monday - Friday</td>
+            <td>9:00 AM - 1:00 PM</td>
+            <td>4:00 PM - 7:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Saturday</td>
+            <td>9:00 AM - 1:00 PM</td>
+            <td>4:00 PM - 6:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Sunday</td>
+            <td>Closed</td>
+            <td>Closed</td>
+        </tr>
+    </table>
+
+    <p>
+        For urgent assistance, contact:
+        <a href="tel:+911800123456">Clinic Emergency Helpline</a>
+    </p>
+
+    <p>
+        &copy; 2026 City Care Clinic
+    </p>
+
+</body>
+</html>
+```

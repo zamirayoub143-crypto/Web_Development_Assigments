@@ -1,0 +1,272 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Admission Application</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>College Admission Application Form</h1>
+        <p>
+            Welcome to the online college admission application portal.
+            Please fill in all the required information carefully.
+        </p>
+
+        <img src="https://images.unsplash.com/photo-1564981797816-1043664bf78d?auto=format&fit=crop&w=800&q=80"
+             alt="College Campus"
+             width="500">
+
+        <p>
+            Visit our
+            <a href="https://www.gla.ac.in/" target="_blank">University Website</a>
+            for more information.
+        </p>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+
+            <fieldset>
+                <legend><strong>Personal Information</strong></legend>
+
+                <p>
+                    <label for="fullname">Full Name:</label><br>
+                    <input type="text"
+                           id="fullname"
+                           name="full_name"
+                           placeholder="Enter your full name"
+                           minlength="3"
+                           maxlength="50"
+                           required>
+                </p>
+
+                <p>
+                    <label for="dob">Date of Birth:</label><br>
+                    <input type="date"
+                           id="dob"
+                           name="date_of_birth"
+                           min="2000-01-01"
+                           max="2010-12-31"
+                           required>
+                </p>
+
+                <p>
+                    <label for="email">Email Address:</label><br>
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           placeholder="example@email.com"
+                           autocomplete="email"
+                           required>
+                </p>
+
+                <p>
+                    <label for="mobile">Mobile Number:</label><br>
+                    <input type="tel"
+                           id="mobile"
+                           name="mobile_number"
+                           placeholder="10-digit mobile number"
+                           pattern="[6-9][0-9]{9}"
+                           maxlength="10"
+                           required>
+                </p>
+
+                <p>
+                    <label for="pin">Application PIN:</label><br>
+                    <input type="password"
+                           id="pin"
+                           name="application_pin"
+                           placeholder="Create a 6-digit PIN"
+                           minlength="6"
+                           maxlength="6"
+                           pattern="[0-9]{6}"
+                           required>
+                </p>
+
+                <p>
+                    <strong>Gender:</strong><br>
+
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </p>
+
+                <p>
+                    <label for="category">Category:</label><br>
+                    <select id="category" name="category" required>
+                        <option value="">-- Select Category --</option>
+                        <option value="general">General</option>
+                        <option value="obc">OBC</option>
+                        <option value="sc">SC</option>
+                        <option value="st">ST</option>
+                        <option value="ews">EWS</option>
+                    </select>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend><strong>Course Information</strong></legend>
+
+                <p>
+                    <label for="course">Select Course:</label><br>
+                    <select id="course" name="course" required>
+                        <option value="">-- Select a Course --</option>
+                        <option value="cse">B.Tech Computer Science Engineering</option>
+                        <option value="aiml">B.Tech CSE - AI & Machine Learning</option>
+                        <option value="ds">B.Tech CSE - Data Science</option>
+                        <option value="ece">B.Tech Electronics & Communication</option>
+                        <option value="me">B.Tech Mechanical Engineering</option>
+                        <option value="ce">B.Tech Civil Engineering</option>
+                        <option value="ee">B.Tech Electrical Engineering</option>
+                        <option value="bca">Bachelor of Computer Applications</option>
+                    </select>
+                </p>
+
+                <p>
+                    <strong>Preferred Study Mode:</strong><br>
+
+                    <input type="radio" id="regular" name="study_mode" value="regular" required>
+                    <label for="regular">Regular</label>
+
+                    <input type="radio" id="online" name="study_mode" value="online">
+                    <label for="online">Online</label>
+                </p>
+
+                <p>
+                    <strong>Areas of Interest:</strong><br>
+
+                    <input type="checkbox" id="coding" name="interest" value="coding">
+                    <label for="coding">Programming</label><br>
+
+                    <input type="checkbox" id="ai" name="interest" value="ai">
+                    <label for="ai">Artificial Intelligence</label><br>
+
+                    <input type="checkbox" id="web" name="interest" value="web">
+                    <label for="web">Web Development</label><br>
+
+                    <input type="checkbox" id="data" name="interest" value="data">
+                    <label for="data">Data Science</label>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend><strong>Educational Information</strong></legend>
+
+                <p>
+                    <label for="qualification">Previous Qualification:</label><br>
+                    <select id="qualification" name="qualification" required>
+                        <option value="">-- Select Qualification --</option>
+                        <option value="10+2">12th / Senior Secondary</option>
+                        <option value="diploma">Diploma</option>
+                        <option value="other">Other</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="percentage">Percentage / CGPA:</label><br>
+                    <input type="number"
+                           id="percentage"
+                           name="percentage"
+                           min="0"
+                           max="100"
+                           step="0.01"
+                           placeholder="Enter percentage"
+                           required>
+                </p>
+
+                <p>
+                    <label for="passing_year">Passing Year:</label><br>
+                    <input type="number"
+                           id="passing_year"
+                           name="passing_year"
+                           min="2015"
+                           max="2026"
+                           required>
+                </p>
+
+                <p>
+                    <label for="school">School / College Name:</label><br>
+                    <input type="text"
+                           id="school"
+                           name="school_college"
+                           placeholder="Enter institution name"
+                           minlength="3"
+                           maxlength="100"
+                           required>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend><strong>Address & Documents</strong></legend>
+
+                <p>
+                    <label for="address">Permanent Address:</label><br>
+                    <textarea id="address"
+                              name="permanent_address"
+                              rows="5"
+                              cols="50"
+                              minlength="10"
+                              maxlength="250"
+                              placeholder="Enter your complete permanent address"
+                              required></textarea>
+                </p>
+
+                <p>
+                    <label for="document">Upload Admission Document:</label><br>
+                    <input type="file"
+                           id="document"
+                           name="admission_document"
+                           accept=".pdf,.jpg,.jpeg,.png"
+                           required>
+                </p>
+
+                <p>
+                    <input type="checkbox"
+                           id="declaration"
+                           name="declaration"
+                           value="accepted"
+                           required>
+
+                    <label for="declaration">
+                        I declare that all information provided by me is correct
+                        and complete to the best of my knowledge.
+                    </label>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <input type="submit" value="Submit Application">
+            <input type="reset" value="Reset Form">
+
+        </form>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 College Admission Portal</p>
+    </footer>
+
+</body>
+</html>
+```
