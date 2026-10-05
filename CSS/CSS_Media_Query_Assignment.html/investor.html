@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Our Investors</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fafafa;
+        }
+
+        .investor-section {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 60px auto;
+
+            text-align: center;
+        }
+
+        .investor-section h1 {
+
+            font-size: 30px;
+
+            margin-bottom: 10px;
+        }
+
+        .investor-section p {
+
+            color: #777;
+
+            margin-bottom: 35px;
+        }
+
+        .investor-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .investor-card {
+
+            height: 130px;
+
+            background: white;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 20px;
+
+            border-radius: 8px;
+
+            box-shadow:
+                0 3px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .investor-card img {
+
+            max-width: 170px;
+
+            max-height: 70px;
+
+            width: auto;
+
+            height: auto;
+
+            object-fit: contain;
+        }
+
+        .logo-text {
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            color: #333;
+        }
+
+        .unitus {
+            color: #ee7f31;
+        }
+
+        .omidyar {
+            color: #333;
+        }
+
+        .india {
+            color: #e85b32;
+        }
+
+        .investor-name {
+            color: #e56a2f;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+
+        /* Medium */
+
+        @media (max-width: 900px) {
+
+            .investor-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+
+
+        /* Small */
+
+        @media (max-width: 600px) {
+
+            .investor-section {
+
+                width: 92%;
+            }
+
+            .investor-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+            .investor-card {
+
+                height: 120px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <section class="investor-section">
+
+        <h1>
+            Our Investors
+        </h1>
+
+        <p>
+            Investors who believe in our vision
+        </p>
+
+
+        <div class="investor-grid">
+
+
+            <div class="investor-card">
+
+                <div class="logo-text unitus">
+                    UNITUS<br>
+                    <small>VENTURES</small>
+                </div>
+
+            </div>
+
+
+            <div class="investor-card">
+
+                <div class="logo-text omidyar">
+                    OMIDYAR<br>
+                    <small>NETWORK</small>
+                </div>
+
+            </div>
+
+
+            <div class="investor-card">
+
+                <div class="logo-text india">
+                    INDIA<br>
+                    <small>QUOTIENT</small>
+                </div>
+
+            </div>
+
+
+            <div class="investor-card">
+
+                <div class="investor-name">
+                    OLA
+                </div>
+
+            </div>
+
+
+            <div class="investor-card">
+
+                <div class="investor-name">
+                    PAYTM
+                </div>
+
+            </div>
+
+
+            <div class="investor-card">
+
+                <div class="investor-name">
+                    SWIGGY
+                </div>
+
+            </div>
+
+
+            <div class="investor-card">
+
+                <div class="investor-name">
+                    DREAM11
+                </div>
+
+            </div>
+
+
+            <div class="investor-card">
+
+                <div class="investor-name">
+                    BYJU'S
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Problem 4</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            grid-template-areas:
+                "nav nav"
+                "left right";
+
+            gap: 10px;
+        }
+
+        .nav {
+            grid-area: nav;
+
+            background: yellow;
+
+            height: 60px;
+
+            padding: 8px;
+
+            font-size: 25px;
+        }
+
+        .left {
+            grid-area: left;
+
+            background: red;
+
+            height: 210px;
+
+            padding: 8px;
+        }
+
+        .right {
+            grid-area: right;
+
+            background: #00ff20;
+
+            height: 210px;
+
+            padding: 8px;
+        }
+
+        /* Small screen */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 20px;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+
+                grid-template-areas:
+                    "nav"
+                    "left"
+                    "right";
+            }
+
+            .nav {
+                height: 75px;
+                font-size: 35px;
+            }
+
+            .left,
+            .right {
+                height: 180px;
+                font-size: 22px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="nav">
+            Navigation
+        </div>
+
+        <div class="left">
+            LEFT BOX
+        </div>
+
+        <div class="right">
+            RIGHT BOX
+        </div>
+
+    </div>
+
+</body>
+</html>

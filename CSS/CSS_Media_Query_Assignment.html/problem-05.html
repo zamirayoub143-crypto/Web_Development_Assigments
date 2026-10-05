@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Problem 5</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 3fr 1fr;
+
+            grid-template-rows: 60px 220px;
+
+            grid-template-areas:
+                "nav nav"
+                "left right";
+
+            gap: 10px;
+        }
+
+        .nav {
+            grid-area: nav;
+
+            background: yellow;
+
+            padding: 8px;
+
+            font-size: 25px;
+        }
+
+        .left {
+            grid-area: left;
+
+            background: red;
+
+            padding: 8px;
+        }
+
+        .right {
+            grid-area: right;
+
+            display: grid;
+
+            grid-template-rows: repeat(3, 1fr);
+
+            gap: 10px;
+        }
+
+        .right div {
+            background: #00ff20;
+
+            padding: 8px;
+        }
+
+
+        /* Medium */
+
+        @media (max-width: 900px) {
+
+            .container {
+                grid-template-columns: 1fr;
+
+                grid-template-rows:
+                    60px
+                    200px
+                    100px;
+
+                grid-template-areas:
+                    "nav"
+                    "left"
+                    "right";
+            }
+
+            .right {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 100px;
+            }
+        }
+
+
+        /* Small */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 20px;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+
+                grid-template-rows:
+                    70px
+                    180px
+                    150px
+                    150px
+                    150px;
+
+                grid-template-areas:
+                    "nav"
+                    "left"
+                    "right1"
+                    "right2"
+                    "right3";
+            }
+
+            .nav {
+                font-size: 32px;
+            }
+
+            .right {
+                display: contents;
+            }
+
+            .right div:nth-child(1) {
+                grid-area: right1;
+            }
+
+            .right div:nth-child(2) {
+                grid-area: right2;
+            }
+
+            .right div:nth-child(3) {
+                grid-area: right3;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="nav">
+            Navigation
+        </div>
+
+        <div class="left">
+            LEFT BOX
+        </div>
+
+        <div class="right">
+
+            <div>
+                RIGHT BOX 1
+            </div>
+
+            <div>
+                RIGHT BOX 2
+            </div>
+
+            <div>
+                RIGHT BOX 3
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
