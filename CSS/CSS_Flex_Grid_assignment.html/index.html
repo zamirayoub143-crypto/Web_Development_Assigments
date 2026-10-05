@@ -1,0 +1,1306 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Flex & Grid Assignment</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        .section {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================================
+           FLEX PROBLEM 1
+        ========================================= */
+
+        .news {
+            background: #eef6ff;
+            padding: 35px;
+            text-align: center;
+        }
+
+        .news h2 {
+            margin-bottom: 25px;
+        }
+
+        .news-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .news-card {
+            flex: 1;
+            background: white;
+            padding: 25px;
+            min-height: 260px;
+            text-align: left;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+        }
+
+        /* News logos */
+
+        .news-logo {
+            height: 65px;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            margin-bottom: 20px;
+        }
+
+        .news-logo img {
+            max-width: 170px;
+            max-height: 55px;
+
+            width: auto;
+            height: auto;
+
+            object-fit: contain;
+        }
+
+        .economic-logo img {
+            max-width: 180px;
+        }
+
+        .moneycontrol-logo img {
+            max-width: 150px;
+        }
+
+        .vccircle-logo img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .news-card small {
+            color: #287cff;
+        }
+
+        .news-card h4 {
+            margin: 12px 0;
+            line-height: 1.5;
+        }
+
+        .news-card p {
+            color: #777;
+            line-height: 1.5;
+        }
+
+        .news button {
+            margin-top: 25px;
+            padding: 10px 25px;
+
+            background: white;
+            color: #ff5270;
+
+            border: 1px solid #ff5270;
+            border-radius: 5px;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================================
+           INVESTORS
+        ========================================= */
+
+        .investor-heading {
+            text-align: center;
+            margin-top: 35px;
+            margin-bottom: 20px;
+        }
+
+        .investors {
+            display: flex;
+            gap: 20px;
+        }
+
+        .investor {
+            flex: 1;
+            height: 130px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: white;
+
+            border: 1px solid #ddd;
+            border-radius: 8px;
+
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+
+            padding: 20px;
+        }
+
+        .investor img {
+            max-width: 190px;
+            max-height: 70px;
+
+            width: auto;
+            height: auto;
+
+            object-fit: contain;
+        }
+
+        .unitus-logo img {
+            max-width: 180px;
+        }
+
+        .on-logo img {
+            max-width: 190px;
+        }
+
+        .india-logo img {
+            max-width: 170px;
+        }
+
+
+        /* =========================================
+           FLEX PROBLEM 2
+        ========================================= */
+
+        .study-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 15px;
+
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            background: #4d6cff;
+            color: white;
+
+            padding: 10px 18px;
+
+            font-weight: bold;
+        }
+
+        .study-header nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        .study-header a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .study-content {
+            display: flex;
+            gap: 40px;
+
+            margin-top: 40px;
+        }
+
+        .study-left {
+            flex: 1;
+        }
+
+        .study-left small {
+            color: #4d6cff;
+            font-weight: bold;
+        }
+
+        .study-left h2 {
+            margin: 15px 0;
+            font-size: 30px;
+        }
+
+        .study-left p {
+            color: #777;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .features {
+            flex: 1;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 15px;
+        }
+
+        .feature {
+            width: calc(50% - 8px);
+
+            padding: 25px;
+
+            box-shadow: 0 3px 15px #ddd;
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #777;
+            line-height: 1.5;
+        }
+
+
+        /* =========================================
+           KEYBOARD - GRID
+        ========================================= */
+
+        .keyboard {
+            display: grid;
+
+            grid-template-columns: repeat(12, 1fr);
+
+            gap: 7px;
+
+            background: #222;
+
+            padding: 20px;
+
+            border-radius: 10px;
+        }
+
+        .keyboard button {
+            height: 45px;
+
+            background: #333;
+
+            color: #00a9d6;
+
+            border: none;
+
+            border-radius: 5px;
+
+            font-weight: bold;
+        }
+
+        .keyboard .space {
+            grid-column: span 2;
+        }
+
+
+        /* =========================================
+           GRID PROBLEM 1 - PARTNERS
+        ========================================= */
+
+        .partners {
+            text-align: center;
+
+            padding: 30px;
+
+            background: #fff7fa;
+        }
+
+        .partners h2 {
+            font-size: 16px;
+        }
+
+        .partners h1 {
+            margin-top: 10px;
+            font-size: 25px;
+        }
+
+        .partner-grid {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 15px;
+
+            margin-top: 25px;
+        }
+
+        .partner {
+            height: 70px;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            background: white;
+
+            border-radius: 10px;
+
+            font-weight: bold;
+
+            box-shadow: 0 2px 10px #ddd;
+        }
+
+
+        /* =========================================
+           GRID PROBLEM 2
+        ========================================= */
+
+        .layout-one {
+            display: grid;
+
+            grid-template-columns: 1fr 2fr;
+
+            grid-template-rows:
+                100px
+                100px
+                100px;
+
+            gap: 12px;
+
+            grid-template-areas:
+                "a b"
+                "c d"
+                "e e";
+        }
+
+        .box {
+            background: #444;
+
+            color: white;
+
+            font-size: 30px;
+
+            padding: 20px;
+
+            border-radius: 8px;
+        }
+
+        .a {
+            grid-area: a;
+        }
+
+        .b {
+            grid-area: b;
+        }
+
+        .c {
+            grid-area: c;
+        }
+
+        .d {
+            grid-area: d;
+        }
+
+        .e {
+            grid-area: e;
+        }
+
+
+        /* =========================================
+           GRID PROBLEM 3
+        ========================================= */
+
+        .layout-two {
+            display: grid;
+
+            grid-template-columns:
+                2fr 1fr 1fr;
+
+            grid-template-rows:
+                100px 100px;
+
+            gap: 12px;
+
+            grid-template-areas:
+                "a b e"
+                "c b e";
+        }
+
+
+        /* =========================================
+           GRID PROBLEM 4 - COFFEE
+        ========================================= */
+
+        .coffee-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+            padding: 30px;
+
+            background: #fafafa;
+        }
+
+        .coffee {
+            padding: 20px;
+
+            background: white;
+
+            border-radius: 8px;
+
+            box-shadow: 0 3px 12px #ddd;
+        }
+
+        .coffee h3 {
+            margin-bottom: 12px;
+        }
+
+        .coffee span {
+            float: right;
+
+            color: #b47a18;
+        }
+
+        .coffee p {
+            color: #777;
+
+            font-size: 14px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================================
+           GRID PROBLEM 5
+        ========================================= */
+
+        .green-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 2fr 1fr;
+
+            grid-template-rows:
+                repeat(3, 120px);
+
+            gap: 20px;
+        }
+
+        .green-grid div {
+            background: #238373;
+
+            border-radius: 5px;
+        }
+
+
+        /* =========================================
+           GRID PROBLEM 6 - CALCULATOR
+        ========================================= */
+
+        .calculator {
+            width: 400px;
+
+            margin: auto;
+
+            padding: 25px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 10px;
+
+            background: #eee;
+
+            border-radius: 10px;
+        }
+
+        .display {
+            grid-column: 1 / 5;
+
+            height: 70px;
+
+            background: white;
+
+            border-radius: 8px;
+
+            margin-bottom: 10px;
+        }
+
+        .calculator button {
+            height: 60px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: white;
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        .calculator .operator {
+            background: black;
+
+            color: white;
+        }
+
+        .calculator .clear {
+            background: red;
+
+            color: white;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 800px) {
+
+            .news-container {
+                flex-direction: column;
+            }
+
+            .study-content {
+                flex-direction: column;
+            }
+
+            .partner-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .coffee-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            .investors {
+                flex-direction: column;
+            }
+
+            .partner-grid,
+            .coffee-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .calculator {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         FLEX PROBLEM 1
+    ====================================================== -->
+
+    <section class="section">
+
+        <h1 class="section-title">
+            Flex Problem 1
+        </h1>
+
+
+        <div class="news">
+
+            <h2>GLA In The News</h2>
+
+
+            <div class="news-container">
+
+
+                <!-- ECONOMIC TIMES -->
+
+                <div class="news-card">
+
+                    <div class="news-logo economic-logo">
+
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/The_Economic_Times_logo.png"
+                            alt="The Economic Times Logo">
+
+                    </div>
+
+                    <small>
+                        21 Dec 2021
+                    </small>
+
+                    <h4>
+                        Edtech startup GLA University acquires
+                        campus funding firm
+                    </h4>
+
+                    <p>
+                        With their latest acquisition,
+                        GLA University moves one step closer
+                        to becoming...
+                    </p>
+
+                </div>
+
+
+                <!-- MONEYCONTROL -->
+
+                <div class="news-card">
+
+                    <div class="news-logo moneycontrol-logo">
+
+                        <img src="https://images.seeklogo.com/logo-png/54/1/moneycontrol-logo-png_seeklogo-544913.png" jsaction="" class="sFlh5c FyHeAf uT7N3d" style="max-width: 600px; --xGflle: 1;" alt="Moneycontrol Logo PNG Vector (SVG) Free Download" jsname="kn3ccd">
+
+                    </div>
+
+                    <small>
+                        26 Oct 2021
+                    </small>
+
+                    <h4>
+                        Kunal Shah, Vijay Shekhar Sharma,
+                        invest in GLA University
+                    </h4>
+
+                    <p>
+                        GLA University is aiming to expand
+                        to 20 smaller cities.
+                    </p>
+
+                </div>
+
+
+                <!-- VCCIRCLE -->
+
+                <div class="news-card">
+
+                    <div class="news-logo vccircle-logo">
+
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/VCCircle_Logo.jpg"
+                            alt="VCCircle Logo">
+
+                    </div>
+
+                    <small>
+                        18 Aug 2020
+                    </small>
+
+                    <h4>
+                        Unitus Ventures leads
+                        pre-Series A funding
+                    </h4>
+
+                    <p>
+                        Software coding platform raised
+                        funding for expansion.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <button>
+                SEE MORE →
+            </button>
+
+        </div>
+
+
+        <!-- INVESTORS -->
+
+        <h2 class="investor-heading">
+            Our Investors, Who Believe In Us
+        </h2>
+
+
+        <div class="investors">
+
+
+            <!-- UNITUS VENTURES -->
+
+            <div class="investor unitus-logo">
+
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Unitus_Logo.png?utm_source=en.wikipedia.org&amp;utm_campaign=index&amp;utm_content=original" jsaction="" class="sFlh5c FyHeAf uT7N3d" style="max-width: 616px; --xGflle: 2.7873303167420813;" alt="Unitus Seed Fund - Wikipedia" jsname="kn3ccd">
+            </div>
+
+
+            <!-- OMIDYAR NETWORK -->
+
+            <div class="investor on-logo">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Omidyar_Network_logo.svg"
+                    alt="Omidyar Network Logo">
+
+            </div>
+
+
+            <!-- INDIA QUOTIENT -->
+
+            <div class="investor india-logo">
+
+               <img src="https://res.cloudinary.com/tia-img/image/fetch/t_company_avatar/https%3A%2F%2Fcdn.techinasia.com%2Fdata%2Fimages%2F113280785a102c4fe7fdde3c79917d13.png" jsaction="" class="sFlh5c FyHeAf uT7N3d" style="max-width: 225px; --xGflle: 1;" alt="India Quotient - Tech in Asia" jsname="kn3ccd">
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FLEX PROBLEM 2
+    ====================================================== -->
+
+    <section class="section">
+
+        <h1 class="section-title">
+            Flex Problem 2
+        </h1>
+
+
+        <div class="study-header">
+
+            <div class="logo">
+                StudyLab
+            </div>
+
+
+            <nav>
+
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Course</a>
+                <a href="#">Instructor</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+
+            </nav>
+
+        </div>
+
+
+        <div class="study-content">
+
+
+            <div class="study-left">
+
+                <small>
+                    WELCOME TO STUDYLAB
+                </small>
+
+                <h2>
+                    We Are StudyLab
+                    An Online Learning Center
+                </h2>
+
+                <p>
+                    A small river named Duden flows by their
+                    place and supplies it with the necessary
+                    regelialia.
+                </p>
+
+                <p>
+                    Far far away, behind the word mountains,
+                    far from the countries Vokalia and
+                    Consonantia.
+                </p>
+
+            </div>
+
+
+            <div class="features">
+
+
+                <div class="feature">
+
+                    <h3>
+                        📖 Top Quality Content
+                    </h3>
+
+                    <p>
+                        A small river named Duden flows
+                        by their place.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>
+                        🎓 Highly Skilled Instructor
+                    </h3>
+
+                    <p>
+                        A small river named Duden flows
+                        by their place.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>
+                        📝 World Class & Quiz
+                    </h3>
+
+                    <p>
+                        A small river named Duden flows
+                        by their place.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>
+                        ✓ Get Certified
+                    </h3>
+
+                    <p>
+                        A small river named Duden flows
+                        by their place.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         KEYBOARD
+    ====================================================== -->
+
+    <section class="section">
+
+        <h1 class="section-title">
+            Grid Assignment - Keyboard
+        </h1>
+
+
+        <div class="keyboard">
+
+            <button>`</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>0</button>
+            <button>Delete</button>
+
+            <button>Tab</button>
+            <button>Q</button>
+            <button>W</button>
+            <button>E</button>
+            <button>R</button>
+            <button>T</button>
+            <button>Y</button>
+            <button>U</button>
+            <button>I</button>
+            <button>O</button>
+            <button>P</button>
+            <button>\</button>
+
+            <button>Caps</button>
+            <button>A</button>
+            <button>S</button>
+            <button>D</button>
+            <button>F</button>
+            <button>G</button>
+            <button>H</button>
+            <button>J</button>
+            <button>K</button>
+            <button>L</button>
+            <button>Enter</button>
+
+            <button>Shift</button>
+            <button>Z</button>
+            <button>X</button>
+            <button>C</button>
+            <button>V</button>
+            <button>B</button>
+            <button>N</button>
+            <button>M</button>
+            <button>&lt;</button>
+            <button>&gt;</button>
+            <button>Shift</button>
+
+            <button>Ctrl</button>
+            <button>Option</button>
+            <button>Alt</button>
+            <button class="space">Space</button>
+            <button>Alt</button>
+            <button>Option</button>
+            <button>←</button>
+            <button>→</button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         GRID PROBLEM 1
+    ====================================================== -->
+
+    <section class="section">
+
+        <h1 class="section-title">
+            Grid Problem 1
+        </h1>
+
+
+        <div class="partners">
+
+            <h2>
+                Have a Dream Company In Mind?
+            </h2>
+
+            <h1>
+                Meet Our 700+ Hiring Partners
+            </h1>
+
+
+            <div class="partner-grid">
+
+                <div class="partner">EAFT</div>
+                <div class="partner">DREAM11</div>
+                <div class="partner">URBANPIPER</div>
+                <div class="partner">Airmeet</div>
+
+                <div class="partner">paytm</div>
+                <div class="partner">WhatsApp</div>
+                <div class="partner">Bharat</div>
+                <div class="partner">SWIGGY</div>
+
+                <div class="partner">Vyapar</div>
+                <div class="partner">PagarBook</div>
+                <div class="partner">smallcase</div>
+                <div class="partner">ShareChat</div>
+
+                <div class="partner">OLA</div>
+                <div class="partner">IBM</div>
+                <div class="partner">BYJU'S</div>
+                <div class="partner">AJIO</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         GRID PROBLEM 2
+    ====================================================== -->
+
+    <section class="section">
+
+        <h1 class="section-title">
+            Grid Problem 2
+        </h1>
+
+
+        <div class="layout-one">
+
+            <div class="box a">A</div>
+
+            <div class="box b">B</div>
+
+            <div class="box c">C</div>
+
+            <div class="box d">D</div>
+
+            <div class="box e">E</div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         GRID PROBLEM 3
+    ====================================================== -->
+
+    <section class="section">
+
+        <h1 class="section-title">
+            Grid Problem 3
+        </h1>
+
+
+        <div class="layout-two">
+
+            <div class="box a">A</div>
+
+            <div class="box b">B</div>
+
+            <div class="box c">C</div>
+
+            <div class="box d">D</div>
+
+            <div class="box e">E</div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         GRID PROBLEM 4
+    ====================================================== -->
+
+    <section class="section">
+
+        <h1 class="section-title">
+            Grid Problem 4 - Coffee
+        </h1>
+
+
+        <div class="coffee-grid">
+
+
+            <div class="coffee">
+                <h3>
+                    Cappuccino
+                    <span>$49</span>
+                </h3>
+
+                <p>
+                    Usage of the Internet is becoming more
+                    common due to rapid advance.
+                </p>
+            </div>
+
+
+            <div class="coffee">
+                <h3>
+                    Americano
+                    <span>$49</span>
+                </h3>
+
+                <p>
+                    Usage of the Internet is becoming more
+                    common due to rapid advance.
+                </p>
+            </div>
+
+
+            <div class="coffee">
+                <h3>
+                    Espresso
+                    <span>$49</span>
+                </h3>
+
+                <p>
+                    Usage of the Internet is becoming more
+                    common due to rapid advance.
+                </p>
+            </div>
+
+
+            <div class="coffee">
+                <h3>
+                    Macchiato
+                    <span>$49</span>
+                </h3>
+
+                <p>
+                    Usage of the Internet is becoming more
+                    common due to rapid advance.
+                </p>
+            </div>
+
+
+            <div class="coffee">
+                <h3>
+                    Mocha
+                    <span>$49</span>
+                </h3>
+
+                <p>
+                    Usage of the Internet is becoming more
+                    common due to rapid advance.
+                </p>
+            </div>
+
+
+            <div class="coffee">
+                <h3>
+                    Coffee Latte
+                    <span>$49</span>
+                </h3>
+
+                <p>
+                    Usage of the Internet is becoming more
+                    common due to rapid advance.
+                </p>
+            </div>
+
+
+            <div class="coffee">
+                <h3>
+                    Piccolo Latte
+                    <span>$49</span>
+                </h3>
+
+                <p>
+                    Usage of the Internet is becoming more
+                    common due to rapid advance.
+                </p>
+            </div>
+
+
+            <div class="coffee">
+                <h3>
+                    Ristretto
+                    <span>$49</span>
+                </h3>
+
+                <p>
+                    Usage of the Internet is becoming more
+                    common due to rapid advance.
+                </p>
+            </div>
+
+
+            <div class="coffee">
+                <h3>
+                    Affogato
+                    <span>$49</span>
+                </h3>
+
+                <p>
+                    Usage of the Internet is becoming more
+                    common due to rapid advance.
+                </p>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         GRID PROBLEM 5
+    ====================================================== -->
+
+    <section class="section">
+
+        <h1 class="section-title">
+            Grid Problem 5
+        </h1>
+
+
+        <div class="green-grid">
+
+            <div></div>
+            <div></div>
+            <div></div>
+
+            <div></div>
+            <div></div>
+            <div></div>
+
+            <div></div>
+            <div></div>
+            <div></div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         GRID PROBLEM 6
+    ====================================================== -->
+
+    <section class="section">
+
+        <h1 class="section-title">
+            Grid Problem 6 - Calculator
+        </h1>
+
+
+        <div class="calculator">
+
+            <div class="display"></div>
+
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="operator">+</button>
+
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="operator">−</button>
+
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="operator">×</button>
+
+            <button class="clear">C</button>
+            <button>0</button>
+            <button class="operator">=</button>
+            <button class="operator">÷</button>
+
+        </div>
+
+    </section>
+
+
+</body>
+</html>
+```
